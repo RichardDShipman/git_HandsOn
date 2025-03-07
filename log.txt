@@ -1,5 +1,0 @@
-commit 4df19b6b9b5490dac70d0c5cc130e7439bcff674
-Author: Richard D Shipman <djshipman2011@gmail.com>
-Date:   Fri Mar 7 12:55:26 2025 +0100
-
-    user-defined message
