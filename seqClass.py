@@ -5,11 +5,7 @@ import re
 from argparse import ArgumentParser
 
 # Argument parser setup
-<<<<<<< HEAD
-parser = ArgumentParser(description='Classify a sequence as DNA or RNA')
-=======
 parser = ArgumentParser(description='Classify a sequence as DNA or RNA and compute nucleotide composition')
->>>>>>> fix
 parser.add_argument("-s", "--seq", type=str, required=True, help="Input sequence")
 parser.add_argument("-m", "--motif", type=str, required=False, help="Motif")
 
@@ -24,14 +20,6 @@ args.seq = args.seq.upper()  # Convert sequence to uppercase
 
 # Validate and classify sequence
 if re.fullmatch(r'^[ACGT]+$', args.seq):  # Only A, C, G, T allowed
-<<<<<<< HEAD
-    print("The sequence is DNA")
-elif re.fullmatch(r'^[ACGU]+$', args.seq):  # Only A, C, G, U allowed
-    print("The sequence is RNA")
-else:
-    print("The sequence is not DNA nor RNA")
-
-=======
     seq_type = "DNA"
 elif re.fullmatch(r'^[ACGU]+$', args.seq):  # Only A, C, G, U allowed
     seq_type = "RNA"
@@ -51,7 +39,6 @@ print("Nucleotide composition:")
 for nt, percentage in sorted(nucleotide_percentages.items()):
     print(f"{nt}: {percentage:.2f}%")
 
->>>>>>> fix
 # Motif search
 if args.motif:
     args.motif = args.motif.upper()
