@@ -28,3 +28,10 @@ if re.search('^[ACGTU]+$', args.seq):
 else:
     print ('The sequence is not DNA nor RNA')
 
+if args.motif:
+    args.motif = args.motif.upper()
+    print(f'Motif search enabled: looking for motif "{args.motif}" in sequence "{args.seq}"... ', end = '')
+    if re.search(args.motif, args.seq):
+        print("FOUND")
+    else:
+        print("NOT FOUND")
